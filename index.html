@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+
+  <!-- Link to Font Awesome -->
+  <script src="https://kit.fontawesome.com/328d082724.js" crossorigin="anonymous"></script>
+
+  <!-- Link to Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1 class="title">#todo </h1>
+  <div class="container">
+    
+    <div class="tabs">
+      <button id="allTab" class="tab active" onclick="toggleTab('allTab')">All</button>
+      <button id="activeTab" class="tab" onclick="toggleTab('activeTab')">Active</button>
+      <button id="completedTab" class="tab" onclick="toggleTab('completedTab')">Completed</button>
+    </div>
+    
+    <div class="header">
+      <input type="text" id="taskInput" placeholder="Add New Task">
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <ul id="tasksList">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+    <ul id="activeTasksList" style="display: none;">
+      <!-- Active tasks will be dynamically added here -->
+    </ul>
+    <ul id="completedTasksList" style="display: none;">
+      <!-- Completed tasks will be dynamically added here -->
+    </ul>
+    <button id="deleteAllCompletedBtn" class="delete-all-btn" style="display: none;">Delete All Completed</button>
+  </div>
+
+  <!-- Link to Script -->
+  <script src="./main.js" defer></script>
+</body>
+</html>

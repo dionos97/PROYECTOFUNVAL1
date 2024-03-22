@@ -1,0 +1,114 @@
+body {
+  font-family: 'Poppins', sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.container {
+  max-width: 80%;
+  padding: 20px;
+  border: 1px #ffffff00;
+  border-radius: 5px;
+  background-color: rgba(248, 248, 248, 0.078); /* Color con transparencia */
+  margin: auto; /* Centrar horizontalmente */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.header button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc; /* Agregar línea horizontal debajo de los botones */
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none; /* Elimina el borde */
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent; /* Hace que el fondo del botón sea transparente */
+}
+
+
+.tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  display: none; /* Inicialmente oculto */
+}
+
+.tab.active::after {
+  display: block; /* Muestra el pseudo-elemento solo cuando el botón está activo */
+  background-color: #2878a7; /* Color del pseudo-elemento cuando el botón está activo */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-all-btn {
+  display: none; /* Cambiado de 'active' a 'none' */
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-all-btn:hover {
+  background-color: #c82333;
+}
